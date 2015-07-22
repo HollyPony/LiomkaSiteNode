@@ -1,0 +1,18 @@
+| <!-- #{project.name} -->
+.panel.panel-custom.project(id=project.anchor_name)
+  .panel-heading
+    h3= project.name
+      small  - #{project.title}
+  .panel-body
+    project.content
+    each sub_project in project.sub_projects
+      | <!-- #{sub_project.title} -->
+      .subpanel
+        .project(id=project.anchor_name + '-' + sub_project.anchor_name)
+          .subpanel-title
+            h4= sub_project.title
+          sub_project.content
+  .panel-footer
+    span.century-upper-font
+      each tag in project.tags.length ? project.tags : "Pas de tags pour aujourd'hui"
+          span= tag.name

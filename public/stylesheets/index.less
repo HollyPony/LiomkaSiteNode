@@ -1,0 +1,57 @@
+.subpanel-title {
+  color: rgb(111, 84, 153);
+}
+
+.subpanel-title:first-child {
+  display: inline-block;
+  margin-left: 0;
+  padding-left: 0.3em;
+  position: relative;
+  color: rgb(111, 84, 153);
+}
+
+.subpanel-title:first-child:before {
+  content: '';
+  display: block;
+  width: 1em;
+  right: 100%;
+  position: absolute;
+  border-top: 4px double #373737;
+  top: 47%;
+}
+
+#scrollspy {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: rgb(111, 84, 153);
+  a {
+    small {
+      color: #d2d2d2;
+    }
+  }
+  a:before {
+    content: '> ';
+    color: transparent;
+  }
+  li {
+    ul {
+      li {
+        padding-left: 1.5em;
+      }
+    }
+  }
+}
+
+#scrollspy .active & > a:before, #scrollspy a {
+  color: white;
+}
+
+#scrollspy a:hover, #scrollspy a:focus {
+  color: rgb(111, 84, 153);
+}
+
+@media (max-width: 991px) {
+  #scrollspy {
+    display: none;
+  }
+}

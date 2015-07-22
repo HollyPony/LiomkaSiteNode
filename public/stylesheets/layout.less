@@ -1,0 +1,238 @@
+body {
+  background: #3B3E48 linear-gradient(#3B3E48 0%, #696969 80%);
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: outside none none;
+}
+
+.main {
+  z-index: 100;
+  position: relative;
+}
+
+.palatino-font {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.century-upper-font {
+  font-family: "Century Gothic", Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+#sky {
+  background-size: 100% 100%;
+  display: none;
+  width: 100%;
+  position: absolute;
+}
+
+#city {
+  border: 0;
+  background: transparent url("../images/city.png") no-repeat center bottom;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: block;
+  opacity: 0;
+}
+
+@media (max-width: 991px) {
+  #city {
+    background: none;
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .col-md-2 .affix-custom.affix-bottom,
+  .col-md-2 .affix-custom.affix {
+    width: 132px;
+  }
+
+  .col-md-3 .affix-custom.affix,
+  .col-md-3 .affix-custom.affix-bottom {
+    width: 213px;
+  }
+}
+
+@media (max-width: 992px) {
+  .affix-custom.affix {
+    position: static !important;
+    width: 100% !important;
+  }
+}
+
+#current-weather + ul {
+  min-width: inherit;
+  a {
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 0;
+  }
+}
+
+.cloud {
+  position: fixed;
+  background-size: cover;
+  height: 356px;
+  width: 100%;
+  display: none;
+  z-index: 6;
+  background: url('../images/cloud.png') no-repeat -100% 0;
+  animation: animateCloud 3s linear 0s infinite;
+  animation-play-state: paused;
+}
+
+@keyframes animateCloud {
+  0% {
+    opacity: 0;
+    background-position: -50% 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    background-position: 150% 0;
+  }
+}
+
+.col-md-2 .affix-custom.affix, .col-md-2 .affix-custom.affix-bottom {
+  width: 165px;
+}
+
+.col-md-3 .affix-custom.affix, .col-md-3 .affix-custom.affix-bottom {
+  width: 263px;
+}
+
+.affix-custom.affix {
+  top: 20px;
+}
+
+.affix-custom.affix-bottom {
+  position: absolute;
+}
+
+.project {
+  & > .panel-footer {
+    .century-upper-font {
+      span {
+        font-size: 1.1em;
+      }
+      span:before {
+        content: '#';
+        color: #80ff00;
+      }
+      span:after {
+        content: ' ';
+      }
+    }
+  }
+  .title {
+    color: rgb(111, 84, 153);
+  }
+}
+
+.panel-custom {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  .panel-body {
+    background-color: rgba(255, 255, 255, 0.945);
+    a {
+      color: #c37600 !important;
+    }
+    a:hover {
+      color: rgb(111, 84, 153);
+    }
+  }
+}
+
+.panel-custom h1, .panel-custom h2, .panel-custom h3, .panel-custom h4, .panel-custom h5 {
+  font-family: "Century Gothic", Arial, sans-serif;
+  font-weight: bold;
+}
+
+.panel-custom h1 small, .panel-custom h2 small, .panel-custom h3 small, .panel-custom h4 small, .panel-custom h5 small {
+  color: #d2d2d2;
+}
+
+.panel-body {
+  & > ul {
+    padding-left: 0;
+    ul {
+      padding-left: 1.5em;
+      list-style: disc outside;
+    }
+  }
+}
+
+.panel-custom .panel-heading, .panel-custom .panel-footer {
+  color: white;
+  border-radius: 0;
+  background: rgba(111, 84, 153, 0.90);
+  border: 0;
+}
+
+.navbar-custom {
+  font-family: "Century Gothic", Arial, sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  border-radius: 0;
+  border: 0;
+}
+
+.navbar-custom .navbar-nav & > li & > a, .navbar-custom .navbar-brand {
+  color: rgb(255, 255, 255);
+}
+
+.navbar-custom .navbar-nav & > li & > a:hover, .navbar-custom .navbar-brand:hover, .navbar-custom .navbar-brand:focus {
+  color: rgb(195, 195, 195);
+}
+
+.navbar-custom .navbar-nav & > .active a, .navbar-custom .navbar-nav & > .active a:hover, .navbar-custom .navbar-nav & > .active a:focus {
+  color: rgba(0, 167, 255, 0.81);
+  background-color: inherit;
+}
+
+.container {
+  .jumbotron-custom {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    background-color: rgba(255, 255, 255, 0.8);
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.container .jumbotron-custom h1, .container .jumbotron-custom h2, .container .jumbotron-custom h3, .container .jumbotron-custom h4, .container .jumbotron-custom h5 {
+  margin-top: 0;
+}
+
+a:focus {
+  outline: 0;
+}
+
+.ul-custom {
+  padding-left: 0;
+  list-style: outside none none;
+  ul {
+    padding-left: 1.4em;
+    list-style: outside none;
+    li:before {
+      content: '- ';
+    }
+  }
+  .list-title {
+    font-weight: bold;
+  }
+}

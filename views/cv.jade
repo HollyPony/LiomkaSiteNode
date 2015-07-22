@@ -1,0 +1,75 @@
+//
+   Created by Liomka on 23/07/15.
+
+extends layout
+
+block head
+  link(head='/stylesheets/cv.css', rel='stylesheet', media='screen')
+
+block content
+  .container
+    .jumbotron.jumbotron-custom
+      h2 Skills
+      p I can do lots a things!
+      .alert.alert-warning(role='alert')= t('maintenance.underConstructionPart')
+  .row
+    .col-md-3.col-xs-12
+      .panel.panel-custom.affix-custom.affix-top(data-spy='affix', data-offset-top='240', data-offset-bottom='70')
+        .panel-heading
+          h4 Me
+      .panel-body
+        p A great PHP2 server told me one day: 'It works!', And I replied: 'Hello world'.
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+    #cv.col-md-9.col-xs-12
+      #vertical-line
+        ul
+          li
+            .entry-point
+            .entry-details
+              .entry-details-content.right
+                .arrow
+                .panel.panel-custom.project
+                  .panel-heading
+                    h4 2013/2014 - (En cours) Diplome Concepteur Développeur Informatique - Niveau II
+                  .panel-body
+                    h5.title Contenu :
+                    ul
+                      li Java
+                      ul
+                        li JSP
+                        li EJB
+                        li CSharp
+                        li UML
+                        li Patterns :
+                          ul
+                            li MVC
+                            li Décorateur
+                            li Singleton
+                            li Fabrique (Factory)
+          li
+            .entry-point
+            .entry-details
+              .entry-details-content.right
+                .arrow
+                .panel.panel-custom
+                  .panel-heading
+                    h4 2012/2013 - CDD 12 Mois à diateam - Tecnicien Développeur C++/Qt - Brest
+                  .panel-body
+                    p Lorem ipsum dolor sit amet
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+          li
+            .entry-point
+            .entry-details
+              .entry-details-content.right
+                .arrow
+                .panel.panel-custom
+                  .panel-heading
+                    h4 2011/2012 - Formation AFPA 9 mois - Développeur Logiciel - Niveau III
+                  .panel-body
+                    p Lorem ipsum dolor sit amet
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+                    p Donec id diam nec sem ullamcorper condimentum. Sed tellus leo, aliquet eget gravida eget, adipiscing scelerisque leo. Nam vitae adipiscing velit. Phasellus nisi enim, facilisis et est at, sollicitudin faucibus nisl. Pellentesque tincidunt ligula ligula, at egestas neque facilisis at. Donec a ultricies mauris. Fusce at convallis ipsum, in laoreet urna. Donec ornare quam et felis congue, nec malesuada mauris mollis.
+
+block scripts
+  script(src='/javascripts/cv.js')

@@ -1,0 +1,27 @@
+extends layout
+
+block head
+  link(href="/stylesheets/index.css", rel="stylesheet", media="screen")
+
+block content
+  .container
+    // Summary
+    .row
+      .col-md-10.col-md-offset-1
+        .jumbotron.jumbotron-custom
+          h3= t('index.title')
+            small= ' '+ t('index.subTitle')
+          p= t('index.summary')
+    // Content
+    .row
+      // Projects
+      .col-md-8.cold-xs-12.col-md-offset-1(data-offset='0')
+        if projects
+          each project in projects
+            include modules/project.jade
+      // Right navbar
+      .col-md-2
+        #scrollspy.affix-custom.affix-top(role='tablist', data-spy='affix', data-offset-top='160', data-offset-bottom='70')
+          include modules/sidebar.jade
+block scripts
+  script(src="/javascripts/index.js")

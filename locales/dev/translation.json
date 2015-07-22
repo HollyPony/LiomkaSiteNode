@@ -1,0 +1,15 @@
+{
+    "app": {
+        "name": "Liomka.IO",
+        "developedBy": "Developed by Arthur A."
+    },
+    "maintenance": {
+        "underContructionPart": "This section is under construction.",
+        "underConstructionPart": "maintenance.underConstructionPart"
+    },
+    "index": {
+        "title": "index.title",
+        "subTitle": "index.subTitle",
+        "summary": "index.summary"
+    }
+}

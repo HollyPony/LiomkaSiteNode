@@ -1,0 +1,10 @@
+ul.nav
+  if projects
+    each project in projects.length ? projects : "Pas de projets ?"
+      li
+        a(href=project.anchor_name)= project.name
+        ul.nav
+          if project.sub_projects
+            each sub_project in project.sub_projects
+              li
+                a(href=project.anchor_name + '-' + sub_project.anchor_name)= sub_project.title
