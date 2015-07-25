@@ -33,16 +33,24 @@ router.get('/', function(req, res, next) {
             tags: []
         }];
 
-    res.render('index', { title: 'Liomka.IO', projects: projects });
+        res.render('index', {
+            title: 'Liomka.IO',
+            path: req.path
+        });
 });
 
 router.get('/cv', function (req, res, next) {
-    res.render('cv');
+    res.render('cv', {
+        title: 'Liomka.IO',
+        path: req.path
+    });
 });
 
 router.get('/demo', function (req, res, next) {
     res.render('jswsclient', {
+        title: 'Liomka.IO',
         wsserver: settings.WSSERVER_URI,
+        path: req.path
     });
 });
 

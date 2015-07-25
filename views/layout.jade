@@ -22,12 +22,27 @@ html
           a.navbar-brand(href="/")= t('app.name')
         #nav-collapse.collapse.navbar-collapse
           ul.nav.navbar-nav
-            li.block.homePage.end(class='{% %}{% %}')
-              a(href='/') Home
-            li.block.cvPage.end(class='{% %}{% %}')
-              a(href='/cv') CV
-            li.block.jsPage.end(class='{% %}{% %}')
-              a(href='/demo') Demo
+            if path === t('root.home')
+              li(class='active')
+                a(href=t('root.home')) Home
+            else
+              li
+                a(href='/') Home
+
+            if path === t('root.cv')
+              li(class='active')
+                a(href=t('root.cv')) CV
+            else
+              li
+                a(href=t('root.cv')) CV
+
+            if path === t('root.demo')
+              li(class='active')
+                a(href=t('root.demo')) Demo
+            else
+              li
+                a(href=t('root.demo')) Demo
+
             li.dropdown
               a.dropdown-toggle(href='#', data-toggle='dropdown')
                 | Projects
@@ -69,7 +84,6 @@ html
                   a(href='https://bitbucket.org/Liomka/jwsclient')
                     | JWSClient
                     small.text-muted - Java Client
-                li
             li.dropdown
               a#current-weather.btn.dropdown-toggle(data-toggle='dropdown', role='button', href='#')
                 img.img-responsive(src='/images/icons/moon-symbol-white-24px.png', alt='Change weather')
@@ -80,6 +94,7 @@ html
                 li
                   a#little-clouds-button.btn(role='button', href='#')
                     img.img-responsive(src='/images/icons/little-clouds-dark-24px.png', alt='Moon')
+
           ul.nav.navbar-nav.navbar-right
             li
               a.btn(role='button', href='https://github.com/liomka')
