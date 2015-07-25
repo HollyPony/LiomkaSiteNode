@@ -4,8 +4,12 @@
         "developedBy": "Developed by Arthur A."
     },
     "maintenance": {
-        "underContructionPart": "This section is under construction.",
-        "underConstructionPart": "maintenance.underConstructionPart"
+        "underConstructionPart": "This section is under construction."
+    },
+    "root": {
+        "home": "/",
+        "cv": "/cv",
+        "demo": "/demo"
     },
     "index": {
         "title": "index.title",
