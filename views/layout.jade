@@ -11,96 +11,95 @@ html
     link(href='/stylesheets/layout.css', rel='stylesheet', media='screen')
     block head
   body(data-spy="scroll", data-target="#scrollspy")
-    .main
-      nav.navbar.navbar-inverse.navbar-custom(role="navigation")
-        .container
-          .navbar-header
-            button.navbar-toggle(type="button", data-toggle="collapse", data-target="#nav-collapse")
-              span.sr-only Toggle navigation
-              span.icon-bar
-              span.icon-bar
-              span.icon-bar
-            a.navbar-brand(href="/")= t('app.name')
-          #nav-collapse.collapse.navbar-collapse
-            ul.nav.navbar-nav
-              li.block.homePage.end(class='{% %}{% %}')
-                a(href='/') Home
-              li.block.cvPage.end(class='{% %}{% %}')
-                a(href='/cv') CV
-              li.block.jsPage.end(class='{% %}{% %}')
-                a(href='/demo') Demo
-              li.dropdown
-                a.dropdown-toggle(href='#', data-toggle='dropdown')
-                  | Projects
-                  small.text-muted
-                    | - Sources links
-                    span.caret
-                ul.dropdown-menu(role='menu')
-                  li
-                    a(href='https://github.com/liomka/Pulm')
-                      | Pulm
-                      small.text-muted - Shows manager
-                  li.divider
-                  li
-                    a(href='https://bitbucket.org/Liomka/pulp')
-                      | Pulp
-                      small.text-muted - All WS projects
-                  li.divider
-                  li
-                    a(href='/demo')
-                      | JsWSClient
-                      small.text-muted - Javascript Client
-                  li
-                    a(href='https://github.com/liomka/PyWSServer')
-                      | PyWSServer
-                      small.text-muted - Python Server
-                  li
-                    a(href='https://bitbucket.org/Liomka/qwsserver')
-                      | QWSServer
-                      small.text-muted - C++/Qt Server
-                  li
-                    a(href='https://bitbucket.org/Liomka/qwsclient')
-                      | QWSClient
-                      small.text-muted - C++/Qt Client
-                  li
-                    a(href='https://bitbucket.org/Liomka/jwsserver')
-                      | JWSServer
-                      small.text-muted - Java Server
-                  li
-                    a(href='https://bitbucket.org/Liomka/jwsclient')
-                      | JWSClient
-                      small.text-muted - Java Client
-                  li
-              li.dropdown
-                a#current-weather.btn.dropdown-toggle(data-toggle='dropdown', role='button', href='#')
-                  img.img-responsive(src='/images/icons/moon-symbol-white-24px.png', alt='Change weather')
-                ul.dropdown-menu(role='menu')
-                  li
-                    a#moon-symbol-button.btn(role='button', href='#')
-                      img.img-responsive(src='/images/icons/moon-symbol-dark-24px.png', alt='Moon')
-                  li
-                    a#little-clouds-button.btn(role='button', href='#')
-                      img.img-responsive(src='/images/icons/little-clouds-dark-24px.png', alt='Moon')
-            ul.nav.navbar-nav.navbar-right
-              li
-                a.btn(role='button', href='https://github.com/liomka')
-                  img.img-responsive(src='/images/icons/GitHub-Mark-24px.png', alt='GitHub Account')
-              li
-                a.btn(role='button', href='https://bitbucket.org/Liomka')
-                  img.img-responsive(src='/images/icons/Bitbucket-24px.png', alt='BitBucket Account')
-              li
-                a.btn(role='button', href='http://fr.linkedin.com/pub/arthur-agombart/58/790/516')
-                  img.img-responsive(src='/images/icons/LinkedIn-24px.png', alt='LinkedIn Account')
-              li
-                a.btn(role='button', href='http://www.viadeo.com/profile/002togokm4syap6/')
-                  img.img-responsive(src='/images/icons/Viadeo-24px.png', alt='Viadeo Account')
+    nav.navbar.navbar-inverse.navbar-custom(role="navigation")
+      .container
+        .navbar-header
+          button.navbar-toggle(type="button", data-toggle="collapse", data-target="#nav-collapse")
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href="/")= t('app.name')
+        #nav-collapse.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.block.homePage.end(class='{% %}{% %}')
+              a(href='/') Home
+            li.block.cvPage.end(class='{% %}{% %}')
+              a(href='/cv') CV
+            li.block.jsPage.end(class='{% %}{% %}')
+              a(href='/demo') Demo
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                | Projects
+                small.text-muted
+                  | - Sources links
+                  span.caret
+              ul.dropdown-menu(role='menu')
+                li
+                  a(href='https://github.com/liomka/Pulm')
+                    | Pulm
+                    small.text-muted - Shows manager
+                li.divider
+                li
+                  a(href='https://bitbucket.org/Liomka/pulp')
+                    | Pulp
+                    small.text-muted - All WS projects
+                li.divider
+                li
+                  a(href='/demo')
+                    | JsWSClient
+                    small.text-muted - Javascript Client
+                li
+                  a(href='https://github.com/liomka/PyWSServer')
+                    | PyWSServer
+                    small.text-muted - Python Server
+                li
+                  a(href='https://bitbucket.org/Liomka/qwsserver')
+                    | QWSServer
+                    small.text-muted - C++/Qt Server
+                li
+                  a(href='https://bitbucket.org/Liomka/qwsclient')
+                    | QWSClient
+                    small.text-muted - C++/Qt Client
+                li
+                  a(href='https://bitbucket.org/Liomka/jwsserver')
+                    | JWSServer
+                    small.text-muted - Java Server
+                li
+                  a(href='https://bitbucket.org/Liomka/jwsclient')
+                    | JWSClient
+                    small.text-muted - Java Client
+                li
+            li.dropdown
+              a#current-weather.btn.dropdown-toggle(data-toggle='dropdown', role='button', href='#')
+                img.img-responsive(src='/images/icons/moon-symbol-white-24px.png', alt='Change weather')
+              ul.dropdown-menu(role='menu')
+                li
+                  a#moon-symbol-button.btn(role='button', href='#')
+                    img.img-responsive(src='/images/icons/moon-symbol-dark-24px.png', alt='Moon')
+                li
+                  a#little-clouds-button.btn(role='button', href='#')
+                    img.img-responsive(src='/images/icons/little-clouds-dark-24px.png', alt='Moon')
+          ul.nav.navbar-nav.navbar-right
+            li
+              a.btn(role='button', href='https://github.com/liomka')
+                img.img-responsive(src='/images/icons/GitHub-Mark-24px.png', alt='GitHub Account')
+            li
+              a.btn(role='button', href='https://bitbucket.org/Liomka')
+                img.img-responsive(src='/images/icons/Bitbucket-24px.png', alt='BitBucket Account')
+            li
+              a.btn(role='button', href='http://fr.linkedin.com/pub/arthur-agombart/58/790/516')
+                img.img-responsive(src='/images/icons/LinkedIn-24px.png', alt='LinkedIn Account')
+            li
+              a.btn(role='button', href='http://www.viadeo.com/profile/002togokm4syap6/')
+                img.img-responsive(src='/images/icons/Viadeo-24px.png', alt='Viadeo Account')
 
-      block content
+    block content
 
-      nav.navbar.navbar-inverse.navbar-bottom.navbar-custom(role="navigation")
-        .container
-          p.navbar-text.navbar-right
-            a.navbar-link(href="#")= t('app.developedBy')
+    nav.navbar.navbar-inverse.navbar-bottom.navbar-custom(role="navigation")
+      .container
+        p.navbar-text.navbar-right
+          a.navbar-link(href="#")= t('app.developedBy')
 
 
     script(src='/lib/jquery/jquery.js')
