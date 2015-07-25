@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var settings = require('../settings')();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -40,7 +41,9 @@ router.get('/cv', function (req, res, next) {
 });
 
 router.get('/demo', function (req, res, next) {
-    res.render('jswsclient', {wsserver: process.env.WSSERVERURI || 'ws://pywsserver.herokuapp.com/ws'});
+    res.render('jswsclient', {
+        wsserver: settings.WSSERVER_URI,
+    });
 });
 
 module.exports = router;
