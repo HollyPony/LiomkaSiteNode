@@ -7,7 +7,7 @@ var db = require('../datas/db');
 
 
 var iterateOrders = function (callback) {
-    db.collection('projects').find({}).toArray(function (err, result) {
+    db.collection('projects').find().sort({"ordering": 1, "sub_projects.ordering": 1}).toArray(function (err, result) {
         callback(err, result);
     });
 };
