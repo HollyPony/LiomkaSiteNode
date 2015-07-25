@@ -147,14 +147,21 @@ $(window).ready(function () {
 
         var hours = date.getHours();
         var minutes = date.getMinutes();
+        minutes = minutes < 10 ? '0' + minutes : minutes;
         var seconds = date.getSeconds();
+        seconds = seconds < 10 ? '0' + seconds : seconds;
 
         var formattedTime = hours + ':' + minutes + ':' + seconds;
 
         // Create the message element
-        chatLog.append($(document.createElement('p')).addClass(messageType).append(
-            $(document.createElement('span')).addClass('timeMessage').addClass('text-muted').text(formattedTime)).append(
-            blocToAppend));
+        chatLog.append($(document.createElement('p'))
+            .addClass(messageType)
+            .append(
+                $(document.createElement('span'))
+                    .addClass('timeMessage')
+                    .addClass('text-muted')
+                    .text(formattedTime))
+                .append(blocToAppend));
         if (chatLog.filter(':animated').length > 0)
             chatLog.stop();
         chatLog.animate({scrollTop: chatLog[0].scrollHeight}, 'slow');
