@@ -1,42 +1,25 @@
 var express = require('express');
 var router = express.Router();
 var settings = require('../settings')();
+var db = require('../datas/db');
 
 /* GET home page. */
+
+
+var iterateOrders = function (callback) {
+    db.collection('projects').find({}).toArray(function (err, result) {
+        callback(err, result);
+    });
+};
+
 router.get('/', function(req, res, next) {
-
-    var projects = [
-        {
-            name: "1",
-            title: "myFirstTtiel",
-            anchor_name: "an anchor name for project",
-            content: "my content<b> test </b>",
-            sub_projects: [
-                {
-                    anchor_name: "an anchar name for subproject",
-                    title: "title subproject",
-                    content: "content subproject"
-                }
-            ],
-            tags: []
-        },
-        {
-            name: "2",
-            title: "Olaaaa",
-            sub_projects: [
-                {
-                    anchor_name: "an anchar name for subproject",
-                    title: "title subproject",
-                    content: "content subproject"
-                }
-            ],
-            tags: []
-        }];
-
+    iterateOrders(function (err, tableContent) {
         res.render('index', {
             title: 'Liomka.IO',
+            projects: tableContent,
             path: req.path
         });
+    });
 });
 
 router.get('/cv', function (req, res, next) {
