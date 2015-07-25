@@ -59,6 +59,6 @@ block content
           a(href='#site') This site
           | . Thanks JQuery.
 
-script(src='javascripts/jswsclient.js')
-script
-  setWSServer('#{wsserver}')
+block scripts
+    script(src='javascripts/jswsclient.js')
+    script= "setWSServer('" + wsserver + "')"

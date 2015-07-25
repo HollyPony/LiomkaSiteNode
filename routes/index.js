@@ -40,7 +40,7 @@ router.get('/cv', function (req, res, next) {
 });
 
 router.get('/demo', function (req, res, next) {
-    res.render('jswsclient');
+    res.render('jswsclient', {wsserver: process.env.WSSERVERURI || 'ws://pywsserver.herokuapp.com/ws'});
 });
 
 module.exports = router;
