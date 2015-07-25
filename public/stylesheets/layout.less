@@ -21,31 +21,6 @@ ul {
   text-transform: uppercase;
 }
 
-#sky {
-  background-size: 100% 100%;
-  display: none;
-  width: 100%;
-  position: absolute;
-}
-
-#city {
-  border: 0;
-  background: transparent url("../images/city.png") no-repeat center bottom;
-  background-size: 100% 100%;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  display: block;
-  opacity: 0;
-}
-
-@media (max-width: 991px) {
-  #city {
-    background: none;
-    display: none;
-  }
-}
-
 @media (max-width: 1200px) {
   .col-md-2 .affix-custom.affix-bottom,
   .col-md-2 .affix-custom.affix {
@@ -62,44 +37,6 @@ ul {
   .affix-custom.affix {
     position: static !important;
     width: 100% !important;
-  }
-}
-
-#current-weather + ul {
-  min-width: inherit;
-  a {
-    padding-left: 15px;
-    padding-right: 15px;
-    border: 0;
-  }
-}
-
-.cloud {
-  position: fixed;
-  background-size: cover;
-  height: 356px;
-  width: 100%;
-  display: none;
-  z-index: 6;
-  background: url('../images/cloud.png') no-repeat -100% 0;
-  animation: animateCloud 3s linear 0s infinite;
-  animation-play-state: paused;
-}
-
-@keyframes animateCloud {
-  0% {
-    opacity: 0;
-    background-position: -50% 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    background-position: 150% 0;
   }
 }
 

@@ -28,11 +28,6 @@ module.exports = function(grunt) {
                     'public/lib/jquery/jquery-ui.js': ['bower_components/jquery-ui/jquery-ui.min.js']
                 }
             },
-            stellar: {
-                files: {
-                    'public/lib/stellar/stellar.js': ['bower_components/stellar/src/jquery.stellar.js']
-                }
-            },
             waypoints: {
                 files: {
                     'public/lib/waypoints/waypoints.js': ['bower_components/waypoints/lib/jquery.waypoints.min.js']
