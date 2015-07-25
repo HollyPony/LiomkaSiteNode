@@ -4,7 +4,7 @@
   "author": "Arthur Agombart <arthur.agombart@gmail.com>",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./server"
   },
   "repository": {
     "type": "git",
