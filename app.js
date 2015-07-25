@@ -40,7 +40,6 @@ i18n.registerAppHelper(app);
 
 app.use('/', routes);
 app.use('/users', users);
-app.use('/lib', express.static(__dirname + '/bower_components'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
