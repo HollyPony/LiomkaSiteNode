@@ -1,9 +1,8 @@
 db.projects.insert([
     {
-        "_id": 1,
         "title": 'WebSockets chat',
         "description": "",
-        'content': "<h5 class='title'>What is that ?</h5><p>Pulp is a multi-platform chat based on WebSocket.</p><p>I've made a client / server chat application using the WebSocket implementation in a selection of programming languages. < /p><p>The WebSocket protocol replace the http for fastest communication between computers. Unfortunatelly it's also less secure. For this project, I choose to develop a chat, because it's easy to show, but we can easily use WebSocket for geolocalisation, game, social-innovative-meeting-mobile-app!</p > < p > The whole project is available on this < a href = 'https://bitbucket.org/Liomka/pulp' > BitBucket page < /a> as git submodules</p > < p > For the communication, JSON is the winner, for the lightweight.It's obvious, for a lightweight protocol, the most lightweight data transmission is what I need.</p><h5 class='title'>Why ?</h5><p>Cause I love new technology, POCs, Test and adventure on libs without example.</p><h5 class='title'>How I did it ...</h5> <h5>Goto: <a href='#pulp-javascript'>Js</a> | <a href='#pulp-qt'>Qt</a> | <a href='#pulp-python'>Python</a> | Ruby (Soon) | <a href='#pulp-android'>Android</a> | <a href='#pulp-java'>Java</a> </h5>",
+        'content': "<h5 class='title'>What is that ?</h5><p>Pulp is a multi-platform chat based on WebSocket.</p><p>I've made a client / server chat application using the WebSocket implementation in a selection of programming languages. </p><p>The WebSocket protocol replace the http for fastest communication between computers. Unfortunatelly it's also less secure. For this project, I choose to develop a chat, because it's easy to show, but we can easily use WebSocket for geolocalisation, game, social-innovative-meeting-mobile-app!</p > <p> The whole project is available on this <a href = 'https://bitbucket.org/Liomka/pulp' > BitBucket page </a> as git submodules</p > <p> For the communication, JSON is the winner, for the lightweight.It's obvious, for a lightweight protocol, the most lightweight data transmission is what I need.</p><h5 class='title'>Why ?</h5><p>Cause I love new technology, POCs, Test and adventure on libs without example.</p><h5 class='title'>How I did it ...</h5> <h5>Goto: <a href='#pulp-javascript'>Js</a> | <a href='#pulp-qt'>Qt</a> | <a href='#pulp-python'>Python</a> | Ruby (Soon) | <a href='#pulp-android'>Android</a> | <a href='#pulp-java'>Java</a> </h5>",
         "date_last_update": '2014-12-14 14:20:40.068',
         "date_creation": '2014-12-14 14:20:40.068',
         "preview": '',
@@ -55,7 +54,6 @@ db.projects.insert([
             }]
     },
     {
-        "_id": 2,
         "title": 'also known as Serizer',
         "description": '',
         'content': "<div class='alert alert-warning' role='alert'>This section is under construction.</div>",
@@ -71,10 +69,9 @@ db.projects.insert([
     }
     ,
     {
-        "_id": 3,
         "title": 'liomka.io',
         "description": '',
-        "content": "<div class='alert alert-warning' role='alert'>This section is under construction.</div><p>This site run on a Python <a href='http://www.tornadoweb.org/en/stable/'>Tornado web</a> server using pip. It\'s using bootstrap, jquery and some lib I describe on the GitHub page. < / p >",
+        "content": "<div class='alert alert-warning' role='alert'>This section is under construction.</div><p>This site run on a Python <a href='http://www.tornadoweb.org/en/stable/'>Tornado web</a> server using pip. It\'s using bootstrap, jquery and some lib I describe on the GitHub page. </p >",
         "date_last_update": '2014-12-14 14:20:40.068',
         "date_creation": '2014-12-14 14:20:40.068',
         "preview": '',
