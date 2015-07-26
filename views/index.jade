@@ -20,8 +20,6 @@ block content
           each project in projects
             include modules/project.jade
       // Right navbar
-      .col-md-2
-        #scrollspy.affix-custom.affix-top(role='tablist', data-spy='affix', data-offset-top='160', data-offset-bottom='70')
-          include modules/sidebar.jade
+      include modules/sidebar.jade
 block scripts
   script(src="/javascripts/index.js")
