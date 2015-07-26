@@ -19,12 +19,18 @@ module.exports = function(grunt) {
             bootstrap: {
                 files: {
                     'public/lib/bootstrap/bootstrap.css': ['bower_components/bootstrap/dist/css/bootstrap.min.css'],
-                    'public/lib/bootstrap/bootstrap.js': ['bower_components/bootstrap/dist/js/bootstrap.min.js']
+                    'public/lib/bootstrap/bootstrap.js': ['bower_components/bootstrap/dist/js/bootstrap.min.js'],
+                    'public/lib/fonts/glyphicons-halflings-regular.svg': ['bower_components/bootstrap/fonts/glyphicons-halflings-regular.svg'],
+                    'public/lib/fonts/glyphicons-halflings-regular.eot': ['bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot'],
+                    'public/lib/fonts/glyphicons-halflings-regular.woff2': ['bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff2'],
+                    'public/lib/fonts/glyphicons-halflings-regular.woff': ['bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff'],
+                    'public/lib/fonts/glyphicons-halflings-regular.ttf': ['bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf']
                 }
             },
             jquery: {
                 files: {
                     'public/lib/jquery/jquery.js': ['bower_components/jquery/dist/jquery.min.js'],
+                    'public/lib/jquery/jquery.min.map': ['bower_components/jquery/dist/jquery.min.map'],
                     'public/lib/jquery/jquery-ui.js': ['bower_components/jquery-ui/jquery-ui.min.js']
                 }
             },
