@@ -11,6 +11,14 @@ module.exports = function(grunt) {
         '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
         ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
         // Task configuration.
+        copy: {
+            main: {
+                expand: true,
+                cwd: 'bower_components/bootstrap/fonts',
+                src: ['**'],
+                dest: 'public/lib/fonts/'
+            }
+        },
         concat: {
             options: {
                 banner: '<%= banner %>',
@@ -19,12 +27,7 @@ module.exports = function(grunt) {
             bootstrap: {
                 files: {
                     'public/lib/bootstrap/bootstrap.css': ['bower_components/bootstrap/dist/css/bootstrap.min.css'],
-                    'public/lib/bootstrap/bootstrap.js': ['bower_components/bootstrap/dist/js/bootstrap.min.js'],
-                    'public/lib/fonts/glyphicons-halflings-regular.svg': ['bower_components/bootstrap/fonts/glyphicons-halflings-regular.svg'],
-                    'public/lib/fonts/glyphicons-halflings-regular.eot': ['bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot'],
-                    'public/lib/fonts/glyphicons-halflings-regular.woff2': ['bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff2'],
-                    'public/lib/fonts/glyphicons-halflings-regular.woff': ['bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff'],
-                    'public/lib/fonts/glyphicons-halflings-regular.ttf': ['bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf']
+                    'public/lib/bootstrap/bootstrap.js': ['bower_components/bootstrap/dist/js/bootstrap.min.js']
                 }
             },
             jquery: {
@@ -95,9 +98,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-qunit');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task.
-    grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
+    grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify', 'copy']);
 
 };
