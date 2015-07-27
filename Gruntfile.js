@@ -22,14 +22,14 @@ module.exports = function(grunt) {
             ]},
             jquery: {
                 files: [
-                    {src: 'public/lib/jquery/jquery.js', dest: 'bower_components/jquery/dist/jquery.min.js'},
-                    {src: 'public/lib/jquery/jquery.min.map', dest: 'bower_components/jquery/dist/jquery.min.map'},
-                    {src: 'public/lib/jquery/jquery-ui.js', dest: 'bower_components/jquery-ui/jquery-ui.min.js'}
+                    {src: 'bower_components/jquery/dist/jquery.min.js', dest: 'public/lib/jquery/jquery.js'},
+                    {src: 'bower_components/jquery/dist/jquery.min.map', dest: 'public/lib/jquery/jquery.min.map'},
+                    {src: 'bower_components/jquery-ui/jquery-ui.min.js', dest: 'public/lib/jquery/jquery-ui.js'}
                 ]
             },
             waypoints: {
                 files: [
-                    {src: 'public/lib/waypoints/waypoints.js', dest: 'bower_components/waypoints/lib/jquery.waypoints.min.js'}
+                    {src: 'bower_components/waypoints/lib/jquery.waypoints.min.js', dest: 'public/lib/waypoints/waypoints.js'}
                 ]
             }
         },
