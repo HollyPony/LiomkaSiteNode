@@ -1,5 +1,3 @@
-/*! LiomkaSiteNode - v0.0.0 - 2015-07-27
-* Copyright (c) 2015 ; Licensed  */
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
