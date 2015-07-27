@@ -12,45 +12,25 @@ module.exports = function(grunt) {
         ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
         // Task configuration.
         copy: {
-            main: {
-                expand: true,
-                cwd: 'bower_components/bootstrap/fonts',
-                src: ['**'],
-                dest: 'public/lib/fonts/'
-            }
-        },
-        concat: {
-            options: {
-                banner: '<%= banner %>',
-                stripBanners: true
-            },
             bootstrap: {
-                files: {
-                    'public/lib/bootstrap/bootstrap.css': ['bower_components/bootstrap/dist/css/bootstrap.min.css'],
-                    'public/lib/bootstrap/bootstrap.js': ['bower_components/bootstrap/dist/js/bootstrap.min.js']
-                }
-            },
+                files: [
+                    {src: 'bower_components/bootstrap/dist/css/bootstrap.min.css', dest: 'public/lib/bootstrap/bootstrap.css'},
+                    {src: 'bower_components/bootstrap/dist/js/bootstrap.min.js', dest: 'public/lib/bootstrap/bootstrap.js'},
+                    {src: 'bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf', dest: 'public/lib/fonts/glyphicons-halflings-regular.ttf'},
+                    {src: 'bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff', dest: 'public/lib/fonts/glyphicons-halflings-regular.woff'},
+                    {src: 'bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff2', dest: 'public/lib/fonts/glyphicons-halflings-regular.woff2'}
+            ]},
             jquery: {
-                files: {
-                    'public/lib/jquery/jquery.js': ['bower_components/jquery/dist/jquery.min.js'],
-                    'public/lib/jquery/jquery.min.map': ['bower_components/jquery/dist/jquery.min.map'],
-                    'public/lib/jquery/jquery-ui.js': ['bower_components/jquery-ui/jquery-ui.min.js']
-                }
+                files: [
+                    {src: 'public/lib/jquery/jquery.js', dest: 'bower_components/jquery/dist/jquery.min.js'},
+                    {src: 'public/lib/jquery/jquery.min.map', dest: 'bower_components/jquery/dist/jquery.min.map'},
+                    {src: 'public/lib/jquery/jquery-ui.js', dest: 'bower_components/jquery-ui/jquery-ui.min.js'}
+                ]
             },
             waypoints: {
-                files: {
-                    'public/lib/waypoints/waypoints.js': ['bower_components/waypoints/lib/jquery.waypoints.min.js']
-                }
-            }
-
-        },
-        uglify: {
-            options: {
-                banner: '<%= banner %>'
-            },
-            dist: {
-                src: '<%= concat.dist.dest %>',
-                dest: 'dist/<%= pkg.name %>.min.js'
+                files: [
+                    {src: 'public/lib/waypoints/waypoints.js', dest: 'bower_components/waypoints/lib/jquery.waypoints.min.js'}
+                ]
             }
         },
         jshint: {
