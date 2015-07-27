@@ -1,5 +1,3 @@
-/*! LiomkaSiteNode - v0.0.0 - 2015-07-27
-* Copyright (c) 2015 ; Licensed  */
 /*!
 Waypoints - 3.1.1
 Copyright © 2011-2015 Caleb Troughton
