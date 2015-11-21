@@ -15,6 +15,7 @@ module.exports = function(grunt) {
             bootstrap: {
                 files: [
                     {src: 'bower_components/bootstrap/dist/css/bootstrap.min.css', dest: 'public/lib/bootstrap/bootstrap.css'},
+                    {src: 'bower_components/bootstrap/dist/css/bootstrap-theme.min.css', dest: 'public/lib/bootstrap/bootstrap-theme.css'},
                     {src: 'bower_components/bootstrap/dist/js/bootstrap.min.js', dest: 'public/lib/bootstrap/bootstrap.js'},
                     {src: 'bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf', dest: 'public/lib/fonts/glyphicons-halflings-regular.ttf'},
                     {src: 'bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff', dest: 'public/lib/fonts/glyphicons-halflings-regular.woff'},

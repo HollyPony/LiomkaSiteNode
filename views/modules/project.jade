@@ -3,8 +3,7 @@
   .panel-heading
     h3= project.name
       small  - #{project.title}
-  .panel-body
-    != project.content
+  .panel-body!= project.content
     each sub_project in project.sub_projects
       | <!-- #{sub_project.title} -->
       .subpanel
