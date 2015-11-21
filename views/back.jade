@@ -1,3 +1,70 @@
 //
    Created by Liomka on 27/07/15.
 
+doctype html
+html
+   head
+      link(rel="stylesheet", href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css")
+      link(href='/lib/bootstrap/bootstrap.css', rel='stylesheet', media='screen')
+      link(href='/lib/froala-editor/css/froala_editor.css', rel='stylesheet', media='screen')
+
+      link(href='/stylesheets/back.css', rel='stylesheet', media='screen')
+
+   body
+      .container
+         h1 Back Office
+         .row
+            ul.project-tabs.nav.nav-tabs(role="tablist")
+               each project in projects
+                  li(role="presentation")
+                     a(role="tab", href='#'+project.anchor_name, aria-controls=project.anchor_name, data-toggle="tab")= project.name
+
+            .tab-content
+               each project in projects
+                  .tab-pane(id=project.anchor_name, role='tabpanel')
+                     form#project-update.form-horizontal(action='/back', method='POST', role='form')
+                        input(type='hidden', name='id', value=project._id)
+
+                        .form-group
+                           label.col-xs-1.control-label(for='name') Name
+                           .col-sm-11
+                              input.form-control(type='text', name='name', value=project.name)
+
+                        .form-group
+                           label.col-xs-1.control-label(for='title') Title
+                           .col-sm-11
+                              input.form-control(type='text', name='title', value=project.title)
+
+                        .form-group
+                           label.col-xs-1.control-label(for='description') Description
+                           .col-sm-11
+                              input.form-control(type='text', name='description', value=project.description)
+
+                        .form-group
+                           label.col-xs-1.control-label(for='anchor_name') Anchor name
+                           .col-sm-11
+                              input.form-control(type='text', name='anchor_name', value=project.anchor_name)
+
+                        .form-group
+                           label.col-xs-1.control-label(for='is_professional') Professional
+                           .col-sm-11
+                              input(type='checkbox', name='is_professional', checked=project.is_professional)
+
+                        .form-group
+                           label.col-xs-1.control-label(for='ordering') Ordering
+                           .col-sm-11
+                              input.form-control(type='text', name='ordering', value=project.ordering)
+
+                        .form-group
+                           label.col-xs-1.control-label(for='tags') Title
+                           .col-sm-11
+                              input.form-control(type='text', name='tags', value=project.tags)
+
+                        textarea.textareaEditor(name='content', placeholder="Enter text ..." style="width: 100%; height: 200px; font-size: 14px; line-height: 18px;")!= project.content
+
+                        button.btn.btn-default.pull-right(type="submit") Submit
+
+      script(src='/lib/jquery/jquery.js')
+      script(src='/lib/bootstrap/bootstrap.js')
+      script(src='/lib/froala-editor/js/froala_editor.min.js')
+      script(src='/javascripts/back.js')
